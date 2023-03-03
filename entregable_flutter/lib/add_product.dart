@@ -11,12 +11,17 @@ class _AddProduct extends State<AddProduct> {
   late TextEditingController controllerName;
   late TextEditingController controllerDescription;
   late TextEditingController controllerPrice;
+  late TextEditingController controllerCant;
+  
+  get cant => null;
+
 
   @override
   void initState() {
     controllerName = new TextEditingController();
     controllerDescription = new TextEditingController();
     controllerPrice = new TextEditingController();
+    controllerCant = new TextEditingController();
     super.initState();
   }
 
@@ -24,13 +29,15 @@ class _AddProduct extends State<AddProduct> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Crer nuevo producto"),
+          title: Text("Crear nuevo producto"),
         ),
         body: ListView(
           children: [
-            TextBox(controllerName, "Name"),
-            TextBox(controllerDescription, "Description"),
-            TextBox(controllerPrice, "Price"),
+            TextBox(controllerName, "Nombre"),
+            TextBox(controllerDescription, "Descripcion"),
+            TextBox(controllerPrice, "Precio"),
+            TextBox(controllerCant, "Cantidad"),
+
             ElevatedButton(
                 onPressed: () {
                   String name = controllerName.text;
@@ -45,10 +52,12 @@ class _AddProduct extends State<AddProduct> {
                         new Product(
                             name: name,
                             description: description,
-                            price: price));
+                            price: price,
+                            cant: cant
+                          ));
                   }
                 },
-                child: Text("Guardar producto"))
+                child: Text("Producto guardado"))
           ],
         ));
   }

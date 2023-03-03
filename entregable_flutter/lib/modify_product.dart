@@ -13,6 +13,7 @@ class _ModifyProduct extends State<ModifyProduct> {
   late TextEditingController controllerName;
   late TextEditingController controllerDescription;
   late TextEditingController controllerPrice;
+  late TextEditingController controllerCant;
 
   @override
   void initState() {
@@ -20,6 +21,7 @@ class _ModifyProduct extends State<ModifyProduct> {
     controllerName = new TextEditingController(text: c.name);
     controllerDescription = new TextEditingController(text: c.description);
     controllerPrice = new TextEditingController(text: c.price);
+    controllerCant = new TextEditingController(text: c.cant);
     super.initState();
   }
 
@@ -33,20 +35,24 @@ class _ModifyProduct extends State<ModifyProduct> {
         children: [
           TextBox(controllerName, "Name"),
           TextBox(controllerDescription, "Description"),
-          TextBox(controllerPrice, "Price"),
+          TextBox(controllerPrice, "Precio"),
+          TextBox(controllerCant, "Cantidad"),
           ElevatedButton(
               onPressed: () {
                 String name = controllerName.text;
                 String description = controllerDescription.text;
                 String price = controllerPrice.text;
+                String cant = controllerPrice.text;
+
 
                 if (name.isNotEmpty &&
                     description.isNotEmpty &&
-                    price.isNotEmpty) {
+                    price.isNotEmpty && 
+                    cant.isNotEmpty) {
                   Navigator.pop(
                       context,
                       new Product(
-                          name: name, description: description, price: price));
+                          name: name, description: description, price: price, cant: cant));
                 }
               },
               child: Text("Guardar cambios")),

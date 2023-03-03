@@ -15,15 +15,18 @@ class _Home_Page extends State<Home_Page> {
     Product(
         name: 'Cuaderno',
         description: 'Rayado 100 hojas, cocido',
-        price: '3000'),
+        price: '3000',
+        cant: '4'),
     Product(
         name: 'Cuaderno',
         description: 'Cuadriculado 100 hojas, cocido',
-        price: '3000'),
+        price: '3000',
+        cant: '8'),
     Product(
         name: 'Cuaderno',
         description: 'Doblelínea 100 hojas, cocido',
-        price: '3000')
+        price: '3000',
+        cant: '8')
   ];
 
   @override
@@ -66,7 +69,7 @@ class _Home_Page extends State<Home_Page> {
               ),
               trailing: Icon(
                 Icons.emoji_objects,
-                color: Colors.green,
+                color: Colors.yellow,
               ),
             );
           },
@@ -106,7 +109,7 @@ class _Home_Page extends State<Home_Page> {
                   },
                   child: Text(
                     "Eliminar",
-                    style: TextStyle(color: Colors.red),
+                    style: TextStyle(color: Colors.blue),
                   ),
                 ),
                 TextButton(
@@ -115,7 +118,7 @@ class _Home_Page extends State<Home_Page> {
                   },
                   child: Text(
                     "Cancelar",
-                    style: TextStyle(color: Colors.blue),
+                    style: TextStyle(color: Colors.green),
                   ),
                 )
               ],
@@ -128,5 +131,7 @@ class Product {
   var description;
   var price;
 
-  Product({this.name, this.description, this.price});
+  Product({this.name, this.description, this.price, required cant});
+
+  get cant => null;
 }

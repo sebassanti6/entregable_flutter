@@ -7,12 +7,19 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
+  
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Material App',
-      home: Home_Page("Inventario de Productos T de A"),
-      color: Colors.green,
+      title: 'Flutter App',
+      theme: ThemeData(fontFamily: 'Raleway'),
+      home: Home_Page("Primer Interaccion con Flutter Inventario"),
+      color: Colors.red,
+      
+      
+
     );
   }
+
+
 }
