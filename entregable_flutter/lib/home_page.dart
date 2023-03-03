@@ -130,8 +130,9 @@ class Product {
   var name;
   var description;
   var price;
+  var cantidad;
 
-  Product({this.name, this.description, this.price, required cant});
+  Product({this.name, this.description, this.price, this.cantidad, required cant});
 
   get cant => null;
 }

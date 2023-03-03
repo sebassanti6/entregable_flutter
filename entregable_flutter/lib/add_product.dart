@@ -57,7 +57,7 @@ class _AddProduct extends State<AddProduct> {
                           ));
                   }
                 },
-                child: Text("Producto guardado"))
+                child: Text("Producto almacenado"))
           ],
         ));
   }
