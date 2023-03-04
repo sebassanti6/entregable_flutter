@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
   return Card(
     
     
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
   
     margin: EdgeInsets.all(15),
     
@@ -47,6 +47,7 @@ class MyApp extends StatelessWidget {
 
         // Usamos ListTile para ordenar la información del card como titulo, subtitulo e icono
         ListTile(
+          //configuraciones adicionales a la hora de generar las limitantes y los estilos
           contentPadding: EdgeInsets.fromLTRB(15, 10, 25, 0),
           title: Text('Deseas ver mas configuraciones'),
           subtitle: Text(
@@ -62,6 +63,7 @@ class MyApp extends StatelessWidget {
   );
 }
 
+//Tener muy en cuenta la modificacion a la hora de precionar el boton
   FlatButton({required Map Function() onPressed, required Text child}) {}
 
 

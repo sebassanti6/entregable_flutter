@@ -14,9 +14,10 @@ class TextBox extends StatelessWidget {
           
             filled: true,
             labelText: this._label,
-            
+
             suffix: GestureDetector(
               child: Icon(Icons.close),
+              
               onTap: () {
                 _controller.clear();
               },

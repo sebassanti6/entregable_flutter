@@ -6,7 +6,7 @@ messageResponse(BuildContext context, String name) {
       context: context,
       builder: (_) => AlertDialog(
             title: Text("Invetario TdeA"),
-            content: Text("El producto " + name),
+            content: Text("El producto a modificar es:" + name),
             
           ));
 }

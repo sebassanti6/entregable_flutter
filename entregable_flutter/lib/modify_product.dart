@@ -32,13 +32,16 @@ class _ModifyProduct extends State<ModifyProduct> {
         title: Text("Editar producto"),
       ),
       body: ListView(
+        //se especifica los nombre de los textos
         children: [
           TextBox(controllerName, "Name"),
           TextBox(controllerDescription, "Description"),
           TextBox(controllerPrice, "Precio"),
           TextBox(controllerCant, "Cantidad"),
           ElevatedButton(
+
               onPressed: () {
+
                 String name = controllerName.text;
                 String description = controllerDescription.text;
                 String price = controllerPrice.text;
@@ -49,10 +52,15 @@ class _ModifyProduct extends State<ModifyProduct> {
                     description.isNotEmpty &&
                     price.isNotEmpty && 
                     cant.isNotEmpty) {
+
+
                   Navigator.pop(
                       context,
                       new Product(
-                          name: name, description: description, price: price, cant: cant));
+                          name: name,
+                           description: description, 
+                           price: price, 
+                           cant: cant));
                 }
               },
               child: Text("Guardar cambios")),

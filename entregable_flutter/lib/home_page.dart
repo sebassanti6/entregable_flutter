@@ -15,15 +15,15 @@ class _Home_Page extends State<Home_Page> {
     Product(
         name: 'Cuaderno',
         description: 'Rayado 100 hojas, cocido',
-        price: '3000',
+        price: '4000',
         cant: '4'),
     Product(
-        name: 'Cuaderno',
-        description: 'Cuadriculado 100 hojas, cocido',
-        price: '3000',
+        name: 'Cartilla',
+        description: 'Cuadriculado 300 hojas, simple',
+        price: '8000',
         cant: '8'),
     Product(
-        name: 'Cuaderno',
+        name: 'Libro',
         description: 'Doblelínea 100 hojas, cocido',
         price: '3000',
         cant: '2')
@@ -62,7 +62,7 @@ class _Home_Page extends State<Home_Page> {
               },
               title: Text(products[index].name),
               subtitle: Text(products[index].description +
-                  " COP " +
+                  " COP(Moneda colombiana) " +
                   products[index].price),
               leading: Card(
                 child: Text(products[index].name.substring(0, 1)),

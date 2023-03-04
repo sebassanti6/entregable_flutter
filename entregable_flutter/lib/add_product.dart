@@ -59,7 +59,7 @@ class _AddProduct extends State<AddProduct> {
                           ));
                   }
                 },
-                child: Text("Producto almacenado"))
+                child: Text("Producto almacenado correctamente"))
           ],
         ));
   }
