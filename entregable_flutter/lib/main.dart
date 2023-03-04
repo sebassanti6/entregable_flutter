@@ -1,6 +1,7 @@
 import 'package:app_crud_flutter/home_page.dart';
 import 'package:flutter/material.dart';
 
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -9,20 +10,31 @@ class MyApp extends StatelessWidget {
   @override
   
   Widget build(BuildContext context) {
-    return MaterialApp(
+    var materialApp = MaterialApp(
+      
       debugShowCheckedModeBanner: false,
       title: 'Flutter App',
-      theme: ThemeData(fontFamily: 'Raleway'),
+      theme: ThemeData(fontFamily: 'Raleway', 
+      
+      primarySwatch: Colors.blue,),
       home: Home_Page("Primer Interaccion con Flutter Inventario"),
-      color: Colors.red,
+      color: Colors.green,
+      
+      
+     
       
       
 
     );
+    return materialApp;
   }
+
+  
+
 
   Card miCard() {
   return Card(
+    
     
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
   
@@ -42,14 +54,9 @@ class MyApp extends StatelessWidget {
           leading: Icon(Icons.home),
         ),
         
+        
         // Usamos una fila para ordenar los botones del card
-        Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: <Widget>[
-            FlatButton(onPressed: () => {}, child: Text('Aceptar')),
-            FlatButton(onPressed: () => {}, child: const Text('Cancelar'))
-          ],
-        )
+        
       ],
     ),
   );

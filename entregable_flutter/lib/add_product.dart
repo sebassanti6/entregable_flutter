@@ -33,6 +33,8 @@ class _AddProduct extends State<AddProduct> {
         ),
         body: ListView(
           children: [
+            
+            TextBox(controllerName, "Ingrese los datos que se solicitan"),
             TextBox(controllerName, "Nombre"),
             TextBox(controllerDescription, "Descripcion"),
             TextBox(controllerPrice, "Precio"),

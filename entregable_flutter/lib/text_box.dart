@@ -11,8 +11,10 @@ class TextBox extends StatelessWidget {
       child: TextField(
         controller: this._controller,
         decoration: InputDecoration(
+          
             filled: true,
             labelText: this._label,
+            
             suffix: GestureDetector(
               child: Icon(Icons.close),
               onTap: () {

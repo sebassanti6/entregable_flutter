@@ -26,7 +26,7 @@ class _Home_Page extends State<Home_Page> {
         name: 'Cuaderno',
         description: 'Doblelínea 100 hojas, cocido',
         price: '3000',
-        cant: '8')
+        cant: '2')
   ];
 
   @override
@@ -52,7 +52,7 @@ class _Home_Page extends State<Home_Page> {
                       products.insert(index, newProduct);
 
                       messageResponse(
-                          context, newProduct.name + " ha sido modificado...!");
+                          context, newProduct.name + " ha sido modificado correctamente!");
                     });
                   }
                 });
@@ -69,7 +69,7 @@ class _Home_Page extends State<Home_Page> {
               ),
               trailing: Icon(
                 Icons.emoji_objects,
-                color: Colors.yellow,
+                color: Colors.red,
               ),
             );
           },
@@ -97,6 +97,7 @@ class _Home_Page extends State<Home_Page> {
     showDialog(
         context: context,
         builder: (_) => AlertDialog(
+          
               title: Text("Eliminar producto"),
               content: Text("Esta seguro de eliminar a " + product.name + "?"),
               actions: [
@@ -118,7 +119,7 @@ class _Home_Page extends State<Home_Page> {
                   },
                   child: Text(
                     "Cancelar",
-                    style: TextStyle(color: Colors.green),
+                    style: TextStyle(color: Colors.blue),
                   ),
                 )
               ],
